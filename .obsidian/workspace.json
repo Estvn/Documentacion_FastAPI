@@ -4,39 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "8615485267c921cf",
+        "id": "c3a598b356047cf6",
         "type": "tabs",
         "children": [
           {
-            "id": "47ea9f05a26209ff",
+            "id": "0dfc74d497abb84c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Documentacion/13_CODIGOS_ESTADO.md",
+                "file": "Documentacion/15_MODULARIZACION_ROUTERS.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "13_CODIGOS_ESTADO"
-            }
-          },
-          {
-            "id": "836261f11672cf00",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Documentacion/14_ERRORES_PERSONALIZADOS.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "14_ERRORES_PERSONALIZADOS"
+              "title": "15_MODULARIZACION_ROUTERS"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -93,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 218.5
+    "width": 218.5,
+    "collapsed": true
   },
   "right": {
     "id": "6efe5ee67828da68",
@@ -183,28 +169,37 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "e29221c764ae2419",
+  "active": "0dfc74d497abb84c",
   "lastOpenFiles": [
-    "Documentacion/13_CODIGOS_ESTADO.md",
+    "Documentacion/6_PARAMETROS_QUERY.md",
+    "Documentacion/15_MODULARIZACION_ROUTERS.md",
+    "Pasted image 20250701141314.png",
+    "Project1/src/routers/__pycache__/router_random.cpython-312.pyc",
+    "Project1/src/routers/__pycache__/router_file.cpython-312.pyc",
+    "Project1/src/database/__pycache__/__init__.cpython-312.pyc",
+    "Project1/src/database/__pycache__/database_movie.cpython-312.pyc",
+    "Project1/src/database/__pycache__",
+    "Project1/src/models/__pycache__/model_movie.cpython-312.pyc",
+    "Project1/src/models/__pycache__/__init__.cpython-312.pyc",
+    "Project1/src/models/__pycache__",
+    "Project1/src/routers/__pycache__/__init__.cpython-312.pyc",
+    "Project1/src/routers/__pycache__/router_movie.cpython-312.pyc",
+    "Pasted image 20250701140137.png",
     "Documentacion/14_ERRORES_PERSONALIZADOS.md",
+    "Pasted image 20250701114458.png",
+    "Pasted image 20250701114434.png",
+    "Documentacion/13_CODIGOS_ESTADO.md",
     "Pasted image 20250701111008.png",
     "Documentacion/12_TIPOS_RESPUESTA_REDIRECCIONES.md",
     "Pasted image 20250701110726.png",
-    "Project1/file/Proyecto1-2.pdf",
     "Project1/file/camera-2931883_1280.jpg",
-    "Project1/file/Proyecto 1-2.pdf",
-    "Project1/file",
-    "Project1/Nueva carpeta",
     "Documentacion/11_VALIDACIONES_PATH_QUERY_PARAMS.md",
-    "Documentacion/6_PARAMETROS_QUERY.md",
     "Documentacion/10_VALIDACIONES_MODELO_DATOS.md",
     "Pasted image 20250701080329.png",
     "Documentacion/7_METODO_POST.md",
     "Documentacion/9_MODELOS_DATOS.md",
     "Pasted image 20250630225721.png",
     "Documentacion/8_METODO_PUT_DELETE.md",
-    "Project1/__pycache__/ModelMovie.cpython-312.pyc",
-    "Project1/ModelMovie.py",
     "8_METODO_PUT_DELETE.md",
     "Documentacion/5_PARAMETROS_RUTA.md",
     "Documentacion/4_METODO_GET.md",
@@ -212,21 +207,14 @@
     "Documentacion/2_PRIMERA_APLICACION_FASTAPI.md",
     "Documentacion/1_HERRAMIENTAS_FASTAPI.md",
     "Documentacion/0_INTRODUCCION_FASTAPI.md",
-    "Documentacion",
-    "Nueva carpeta",
-    "Project1/__pycache__/data.cpython-312.pyc",
-    "Project1/data.py",
     "4_METODO_GET.md",
     "1_HERRAMIENTAS_FASTAPI.md",
     "5_PARAMETROS_RUTA.md",
     "2_PRIMERA_APLICACION_FASTAPI.md",
     "7_METODO_POST.md",
     "Pasted image 20250630172247.png",
-    "Pasted image 20250630161314.png",
     "6_PARAMETROS_QUERY.md",
     "3_DOCUMENTACION_AUTOMATICA.md",
-    "0_INTRODUCCION_FASTAPI.md",
-    "Project1/env-fastapi/Lib/site-packages/starlette-0.46.2.dist-info/licenses/LICENSE.md",
-    "Project1/env-fastapi/Lib/site-packages/uvicorn-0.34.3.dist-info/licenses/LICENSE.md"
+    "0_INTRODUCCION_FASTAPI.md"
   ]
 }

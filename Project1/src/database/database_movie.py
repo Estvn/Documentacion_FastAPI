@@ -1,4 +1,4 @@
-from ModelMovie import Movie
+from ..models.model_movie import Movie
 
 movies: list[Movie] = [
     Movie(
