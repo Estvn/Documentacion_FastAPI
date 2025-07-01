@@ -1,5 +1,5 @@
 from fastapi import FastAPI as api, Body, Path, Query
-from fastapi.responses import HTMLResponse as html, JSONResponse
+from fastapi.responses import HTMLResponse as html, JSONResponse, PlainTextResponse, RedirectResponse, FileResponse
 from data import movies
 from ModelMovie import Movie, MoviePut # Importando el modelo de datos
 # import datetime
@@ -13,9 +13,10 @@ app.version = "0.0.1" # Agregando versión del proyecto para reflejar en la docu
 
 # Generando una ruta tipo GET
 # El parámetro tags es el nombre del Endpoint (se podrá ver en la documentación de Swagger)
-@app.get("/", tags=['Home']) 
+# Los otros parámetros son para documentar más precisa la API
+@app.get("/", tags=['Home'], status_code = 500, response_description = "Mensaje de descripción de respuesta") 
 def home():
-    return JSONResponse({"valor" : "Hello World!"})
+    return PlainTextResponse(content = "Home")
 
 @app.get("/hola", tags=['Hola'])
 def hola():
@@ -40,15 +41,7 @@ def get_movie(id:int = Path(ge=0)) -> Movie | dict:
     for movie in movies:
         if movie.id == id:
             return movie.model_dump()
-    return JSONResponse(content = {})
-    '''
-    try:
-        return movies[id]
-    except IndexError:
-        return {"error": "Movie not found"}
-    except Exception as e:
-        return {"error": str(e)}
-    '''
+    return JSONResponse(content = {}, status_code = 404)
 
 # PARÁMETRO QUERY
 @app.get("/movies/", tags=["Movies"])
@@ -64,9 +57,10 @@ def get_movies_by_category(category: str = Query(min_length=5, max_length=20), y
 # METODOS POST
 
 @app.post("/movies/", tags=["Movie"])
-def create_movie(movie: Movie) -> list[Movie]:
+def create_movie(movie: Movie):
     movies.append(movie) # Agrega un objeto Movie en el arreglo
-    return JSONResponse(content = [movie.model_dump() for movie in movies]) # Convierte los arreglos en diccionarios/JSON 
+    return JSONResponse(content = [movie.model_dump() for movie in movies], status_code = 201) # Convierte los arreglos en diccionarios/JSON 
+    # return RedirectResponse("/movies", status_code=303)
 
 #--------------------------------------------------------------------------------------
 # METODOS PUT
@@ -92,21 +86,13 @@ def delete_movie(id: int) -> list[Movie]:
             movies.remove(movie)
     return JSONResponse(content = [movie.model_dump() for movie in movies])
 
+# ENVIAR ARCHIVO
+@app.get("/get_file", tags="File")
+def get_file():
+    return FileResponse("./file/Proyecto1-2.pdf")
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+@app.get("/get_img", tags=["Image"])
+def get_img():
+    return FileResponse("./file/camera-2931883_1280.jpg")
 
 
